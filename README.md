@@ -5,6 +5,7 @@
 FancyAlt is a creative AI-powered API for analyzing images and generating accessible, human-friendly alt-text captions, vivid storytelling, and content moderation.
 
 Perfect for improving accessibility, storytelling, and visual content understanding.
+
 ---
 ## 📸 What FancyAlt Can Do
 
