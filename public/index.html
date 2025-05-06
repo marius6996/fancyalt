@@ -1,0 +1,117 @@
+<!-- FANCYALT VERSION: 2025-05-05-9:42PM -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FancyAlt</title>
+    <meta name="description" content="FancyAlt is an API that analyzes images and generates captions, alt text, and creative stories.">
+    <meta name="keywords" content="AI, alt text, image analysis, captioning, storytelling, moderation, accessibility, image captions, image API, alt text generator">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fancyalt.com/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="FancyAlt" />
+    <meta property="og:description" content="Generate alt text, captions, and stories from any image using AI." />
+    <meta property="og:image" content="https://fancyalt.com/og-preview.png" />
+    <meta property="og:url" content="https://fancyalt.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+
+    <!-- JSONEditor v10+ -->
+    <link rel="stylesheet" href="/vendor/jsoneditor/jsoneditor.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/footer.css">
+
+    <!-- Scripts -->
+    <script src="/vendor/jsoneditor/jsoneditor.min.js" defer></script>
+    <script defer src="/js/app.js"></script>
+</head>
+
+<body>
+<div class="container position-relative">
+
+    <h1>HELLO THIS IS A TEST</h1>
+
+
+
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkToggle">Dark Mode</button>
+
+    <!-- Branding -->
+    <div id="branding" class="text-center mb-4">
+        <img src="/icon.png" alt="FancyAlt Logo" height="60">
+    </div>
+
+    <!-- Title and Subtitle -->
+    <h1 class="text-center mb-2">FancyAlt</h1>
+    <p class="subtitle text-center mb-5">Analyze images and instantly generate captions, alt text, and stories.</p>
+
+    <!-- Upload Image Form -->
+    <div class="mb-5">
+        <h4>Upload an Image File</h4>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="form-file-wrapper mb-3">
+                <input type="file" name="image" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <select name="mode" class="form-select">
+                    <option value="basicCaption">Basic Caption</option>
+                    <option value="storyCaption">Story Caption</option>
+                    <option value="moderateOnly">Moderate Only</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Analyze Image</button>
+        </form>
+    </div>
+
+    <!-- Analyze by URL Form -->
+    <div class="mb-5">
+        <h4>Analyze Image by URL</h4>
+        <form id="urlForm">
+            <div class="mb-3">
+                <input type="url" name="img" class="form-control" placeholder="Enter public image URL" required>
+            </div>
+            <div class="mb-3">
+                <select name="mode" class="form-select">
+                    <option value="urlAnalyze">Basic Caption from URL</option>
+                    <option value="urlModerate">Moderate URL</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Analyze URL</button>
+        </form>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading text-center" style="display: none;">Loading, please wait...</div>
+
+    <!-- Result Boxes -->
+    <div id="result" class="result-box" style="display: none;"></div>
+    <div id="jsonTree" class="result-box" style="display: none;"></div>
+
+    <!-- Docs Button -->
+    <div class="text-center mt-4 docs-button-wrapper">
+        <a href="/api-docs" class="btn custom-docs-btn">View API Docs</a>
+    </div>
+
+    <!-- Divider -->
+    <div class="quill-divider-wrapper text-center">
+        <img src="/quill_divider.png" alt="Divider" class="quill-divider">
+    </div>
+
+</div>
+<script defer src="/footer.js"></script>
+</body>
+</html>
+

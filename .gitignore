@@ -1,0 +1,40 @@
+# Node modules
+/node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*  # e.g., .env.development, .env.production
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Uploads & temp files
+/uploads/*
+!/uploads/.gitkeep
+
+/tmp/
+*.tmp
+
+# Coverage reports
+coverage/
+
+# Optional lock files (if you want to enforce consistency, keep one)
+/package-lock.json
+# /yarn.lock
+
+# IDE/editor config
+.vscode/
+.idea/
+*.swp
+
+# Build/output artifacts (if any)
+/dist/
+/build/

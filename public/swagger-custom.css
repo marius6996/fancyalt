@@ -1,0 +1,57 @@
+/* public/swagger-custom.css */
+
+/* ---------------------------------------
+   Global Swagger UI Overrides
+---------------------------------------- */
+.swagger-ui {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+}
+
+/* ---------------------------------------
+   Topbar Styling
+---------------------------------------- */
+.swagger-ui .topbar {
+    background-color: #2b4f7c;
+}
+
+.swagger-ui .topbar-wrapper img {
+    height: 40px;
+    margin: auto;
+    display: block;
+}
+
+.swagger-ui .topbar-wrapper span {
+    display: none;
+}
+
+/* ---------------------------------------
+   Custom Gradient Buttons
+---------------------------------------- */
+.swagger-ui .btn {
+    background: linear-gradient(135deg, #ff9800, #e91e63, #2196f3);
+    background-size: 200% 200%;
+    animation: gradientFlow 6s ease infinite;
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.swagger-ui .btn:hover {
+    background-position: right center;
+    opacity: 0.9;
+}
+
+.swagger-ui .btn.cancel {
+    color: white !important;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: left center;
+    }
+    100% {
+        background-position: right center;
+    }
+}

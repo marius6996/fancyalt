@@ -1,0 +1,409 @@
+/* public/index.css */
+
+/* ---------------------------------------
+   Base Layout Styles
+---------------------------------------- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body > .container {
+    flex: 1 0 auto;
+    padding-bottom: 0 !important;
+    margin: 2rem auto;
+}
+
+.custom-docs-btn {
+    margin-bottom: 0rem !important;
+}
+
+.docs-button-wrapper,
+.text-center.mt-4 {
+    margin-bottom: 0 !important;
+    padding-bottom: 2rem !important;
+}
+
+.site-footer {
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+}
+
+/* ---------------------------------------
+   Typography & Global Settings
+---------------------------------------- */
+body {
+    background: #fefefe;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h4, label {
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-top: -0.5rem;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .subtitle {
+    color: #ccc;
+}
+
+/* ---------------------------------------
+   Layout Container
+---------------------------------------- */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem 2rem 1.5rem; /* Top, sides, bottom padding */
+    border-radius: 12px;
+    border: 1px solid #30B0C7;
+    background-color: #ffffff;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    border-color: #444;
+}
+
+/* ---------------------------------------
+   Form Elements
+---------------------------------------- */
+input[type="file"],
+input[type="url"],
+select,
+.form-control,
+.form-select {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="file"]:focus,
+input[type="url"]:focus,
+select:focus {
+    outline: none;
+    border-color: #30B0C7;
+}
+
+body.dark-mode input[type="file"],
+body.dark-mode input[type="url"],
+body.dark-mode select {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode input[type="file"]::file-selector-button {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+}
+
+/* ---------------------------------------
+   Branding Section
+---------------------------------------- */
+#branding {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#branding img {
+    height: 60px;
+}
+
+/* ---------------------------------------
+   Result & Output Boxes
+---------------------------------------- */
+.result-box {
+    background: #f9fbfd;
+    border: 1px solid #30B0C7;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    overflow-x: auto;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.4s ease;
+}
+
+.result-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .result-box {
+    background-color: #222;
+    border-color: #444;
+}
+
+/* ---------------------------------------
+   Loading Indicator
+---------------------------------------- */
+.loading {
+    font-weight: bold;
+    color: #30B0C7;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* ---------------------------------------
+   JSON Tree Viewer
+---------------------------------------- */
+#jsonTree .jsoneditor {
+    background: #f1faff;
+    border-radius: 8px;
+    border: 1px solid #30B0C7;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+body.dark-mode #jsonTree .jsoneditor {
+    background: #2a2a2a;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+/* ---------------------------------------
+   Buttons
+---------------------------------------- */
+.btn-primary,
+.btn-success,
+.custom-docs-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.4s ease;
+    background: linear-gradient(135deg, #ff9800, #e91e63, #2196f3);
+    background-size: 200% 200%;
+    animation: gradientFlow 5s ease infinite;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: auto;
+    max-width: 300px;
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+.custom-docs-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    background-position: right center;
+    color: #000 !important;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: left center;
+    }
+    100% {
+        background-position: right center;
+    }
+}
+
+/* ---------------------------------------
+   Divider
+---------------------------------------- */
+.quill-divider-wrapper {
+    margin: 2rem 0 0.5rem;
+}
+
+.quill-divider {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+
+/* ---------------------------------------
+   Dark Mode Toggle Button
+---------------------------------------- */
+.dark-mode-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: none;
+    border: 2px solid #30B0C7;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: #30B0C7;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #30B0C7;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ---------------------------------------
+   JSON Editor Dark Theme
+---------------------------------------- */
+body.dark-mode .jsoneditor {
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important;
+    border-color: #555 !important;
+}
+
+body.dark-mode .jsoneditor .ace_editor,
+body.dark-mode .jsoneditor .ace_content {
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .jsoneditor .jsoneditor-field {
+    color: #9cdcfe !important;
+}
+
+body.dark-mode .jsoneditor .jsoneditor-value {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .jsoneditor .jsoneditor-string {
+    color: #00cc66 !important;
+}
+
+body.dark-mode .jsoneditor .jsoneditor-number {
+    color: #ff6666 !important;
+}
+
+body.dark-mode .jsoneditor .jsoneditor-boolean {
+    color: #ffcc00 !important;
+}
+
+body.dark-mode .jsoneditor .jsoneditor-toggle {
+    filter: invert(1);
+}
+
+body.dark-mode .jsoneditor .jsoneditor-expand,
+body.dark-mode .jsoneditor .jsoneditor-collapse {
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+/* ---------------------------------------
+   File Input
+---------------------------------------- */
+input[type="file"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 60px;
+    padding: 0 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    line-height: 60px;
+}
+
+input[type="file"]::file-selector-button {
+    font: inherit;
+    padding: 0.5rem 1.2rem;
+    margin-right: 1rem;
+    background-color: #eee;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 1.25;
+    height: auto;
+    vertical-align: middle;
+}
+
+body.dark-mode input[type="file"] {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode input[type="file"]::file-selector-button {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    padding: 0.5rem 1.2rem;
+}
+
+body.dark-mode .jsoneditor {
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .jsoneditor-tree,
+body.dark-mode .jsoneditor-values,
+body.dark-mode .jsoneditor-value,
+body.dark-mode .jsoneditor-field {
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important;
+    border-color: #555 !important;
+}
+
+/* ---------------------------------------
+   Responsive Design
+---------------------------------------- */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem 2rem 2rem;
+    }
+
+    .dark-mode-toggle {
+        top: 1rem;
+        right: 1rem;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn-primary,
+    .btn-success,
+    .custom-docs-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+
+    .docs-button-wrapper {
+        margin-bottom: 2rem;
+    }
+}
+
