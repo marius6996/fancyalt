@@ -15,6 +15,7 @@ const swaggerDocument = YAML.load(path.join(__dirname, 'swagger.yaml'));
 
 //serve Swagger UI from /api-docs (let swagger-ui-express handle everything)
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, {
+  customCssUrl: '/swagger-custom.css', //custom css
   customSiteTitle: 'FancyAlt API Docs',
   customfavIcon: '/favicon.ico',
 }));
@@ -43,7 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //log when root is hit
 app.get('/', (req, res) => {
   const fullPath = path.join(__dirname, 'public', 'index.html');
-  console.log('✅ Serving:', fullPath);
+  console.log('Serving:', fullPath);
   res.sendFile(fullPath);
 });
 

@@ -71,9 +71,7 @@ info:
         - `img` = `https://images.unsplash.com/photo-1621370114522-f08290f80f67`
         - `mode` = urlAnalyze
     
-    ---
-    
-    > 💡 All responses return structured JSON including `caption`, `tags`, `moderation`, and more.
+    💡 All responses return structured JSON including `caption`, `tags`, `moderation`, and more.
     
     ---
 
