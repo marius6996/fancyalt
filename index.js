@@ -1,5 +1,12 @@
 //index.js
 require('dotenv').config();
+console.log('[ENV CHECK]', {
+  AZURE_KEY: process.env.AZURE_KEY ? '✔ loaded' : '✘ missing',
+  AZURE_ENDPOINT: process.env.AZURE_ENDPOINT ? '✔ loaded' : '✘ missing',
+  AZURE_REGION: process.env.AZURE_REGION ? '✔ loaded' : '✘ missing',
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY ? '✔ loaded' : '✘ missing',
+});
+
 const express = require('express');
 const path = require('path');
 const captionRoute = require('./routes/caption');
@@ -129,9 +136,14 @@ app.use((err, req, res, next) => {
 });
 
 //start server
-app.listen(PORT, () => {
-  console.log(`FancyAlt API running on http://localhost:${PORT}`);
+//app.listen(PORT, () => {
+//  console.log(`FancyAlt API running on http://localhost:${PORT}`);
+//});
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`FancyAlt API running on http://0.0.0.0:${PORT}`);
 });
+
 
 
 

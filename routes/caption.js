@@ -1,5 +1,6 @@
 //routes/caption.js
 //handles image uploads and URLs to generate captions, stories, and content moderation
+require('dotenv').config();
 const express = require('express');
 const multer = require('multer');
 const fs = require('fs');
