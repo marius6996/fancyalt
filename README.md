@@ -1,10 +1,11 @@
 # ✨ FancyAlt
 
-**Created by: Jill Platts**  
-**© 2025. All rights reserved.**
+**Created by: Jill Platts**
 
-FancyAlt is a creative **AI-powered API** for analyzing images and generating accessible, human-friendly alt-text captions, vivid storytelling, and content moderation.  
+FancyAlt is a creative AI-powered API for analyzing images and generating accessible, human-friendly alt-text captions, vivid storytelling, and content moderation.
+
 Perfect for improving accessibility, storytelling, and visual content understanding.
+
 ---
 ## 📸 What FancyAlt Can Do
 
