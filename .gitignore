@@ -38,3 +38,16 @@ coverage/
 # Build/output artifacts (if any)
 /dist/
 /build/
+
+# Git conflict files
+*.orig
+
+# PM2 process manager data (optional)
+.pm2/
+
+# Windows system files
+ehthumbs.db
+desktop.ini
+
+# Test results
+test-results/

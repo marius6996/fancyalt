@@ -6,6 +6,9 @@ FancyAlt is a creative AI-powered API for analyzing images and generating access
 
 Perfect for improving accessibility, storytelling, and visual content understanding.
 
+**🌐 Live Web App:** [`https://fancyalt.com`](https://fancyalt.com)  
+**📚 Interactive API Documentation:** [`https://fancyalt.com/api-docs`](https://fancyalt.com/api-docs)
+
 ---
 ## 📸 What FancyAlt Can Do
 
@@ -72,7 +75,7 @@ FancyAlt uses the **OpenAI API** for one mode:
 
 1. Clone the repo:
   ```
-    git clone https://github.com/yourusername/fancyalt.git
+    git clone https://github.com/jillmpla/fancyalt.git
     cd fancyalt
   ```
 2. Install dependencies:
@@ -234,3 +237,5 @@ See the full license terms in the [LICENSE.txt](./LICENSE.txt) file.
 ## 📬 Contact
 
 For questions or support, email: [fancyaltdotcom@gmail.com](mailto:fancyaltdotcom@gmail.com)
+
+## If you find this project useful, consider giving it a star! ⭐

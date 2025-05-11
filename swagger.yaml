@@ -183,7 +183,7 @@ info:
     ---
 
 servers:
-  - url: http://159.203.102.129:5000/api
+  - url: https://fancyalt.com/api
     description: Production API – live server
   - url: http://localhost:5000/api
     description: Local development – test on your machine
